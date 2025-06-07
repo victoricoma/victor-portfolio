@@ -10,6 +10,19 @@ import teamPhoto from './assets/profile-networking.png';
 import logoLight from './assets/logo-light.png';
 import logoDark from './assets/logo-dark.png';
 
+// Importar fotos de momentos da carreira
+import careerPhoto1 from './assets/20220921_081119.jpg'; // AWS Initiate
+import careerPhoto2 from './assets/20240525_170001.jpg'; // Laboratório com alunos
+import careerPhoto3 from './assets/20240511_161144.jpg'; // Equipe de desenvolvimento
+import careerPhoto4 from './assets/20220922_080121.jpg'; // Evento/conferência
+import careerPhoto5 from './assets/20231005_084322.jpg'; // Momento educacional
+import careerPhoto6 from './assets/20231005_084815.jpg'; // Apresentação/palestra
+
+// Importar imagens dos projetos de infraestrutura
+import projetoTikTok from './assets/projeto-tiktok.png';
+import projetoMynd8 from './assets/projeto-mynd8.png';
+import projetoPetropolis from './assets/projeto-petropolis.png';
+
 // Componente Header moderno
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +33,9 @@ const Header = () => {
     { href: '#about', label: 'About' },
     { href: '#experience', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
+    { href: '#infrastructure', label: 'Infrastructure' },
     { href: '#skills', label: 'Skills' },
+    { href: '#gallery', label: 'Gallery' },
     { href: '#contact', label: 'Contact' }
   ];
 
@@ -598,6 +613,255 @@ const SkillsSection = () => {
   );
 };
 
+// Componente Infrastructure - Projetos de Infraestrutura
+const InfrastructureSection = () => {
+  const infrastructureProjects = [
+    {
+      image: projetoTikTok,
+      title: "Escola de Cria + TikTok",
+      description: "Arquitetura completa da plataforma educacional para criadores de conteúdo",
+      role: "Arquiteto de Infraestrutura",
+      responsibilities: [
+        "Configuração de ambiente cloud (GCP)",
+        "Implementação de LMS Moodle customizado",
+        "Integração com APIs do TikTok",
+        "Sistema de autenticação e autorização",
+        "Monitoramento e observabilidade"
+      ],
+      technologies: ["Google Cloud Platform", "Moodle", "Kubernetes", "Firebase", "Vertex AI"],
+      metrics: {
+        users: "10,000+",
+        uptime: "99.9%",
+        performance: "< 2s load time"
+      }
+    },
+    {
+      image: projetoMynd8,
+      title: "Mynd8 - Gestor de Influenciadores",
+      description: "Plataforma completa para gestão de influenciadores digitais e campanhas",
+      role: "Arquiteto de Software e Infraestrutura",
+      responsibilities: [
+        "Design da arquitetura de microserviços",
+        "Implementação de CI/CD pipeline",
+        "Configuração de banco de dados distribuído",
+        "Sistema de cache e otimização",
+        "Segurança e compliance LGPD"
+      ],
+      technologies: ["React", "Node.js", "MongoDB", "Redis", "Docker", "AWS"],
+      metrics: {
+        campaigns: "500+",
+        influencers: "2,000+",
+        availability: "99.8%"
+      },
+      link: "https://projetos.mynd8.com.br/"
+    },
+    {
+      image: projetoPetropolis,
+      title: "Grupo Petropolis - Plataforma Institucional",
+      description: "Sistema corporativo para gestão e comunicação interna da empresa",
+      role: "Desenvolvedor Full Stack e DevOps",
+      responsibilities: [
+        "Desenvolvimento frontend e backend",
+        "Configuração de servidores e deploy",
+        "Integração com sistemas legados",
+        "Implementação de backup e disaster recovery",
+        "Treinamento da equipe interna"
+      ],
+      technologies: ["React", "Node.js", "PostgreSQL", "Docker", "Nginx"],
+      metrics: {
+        employees: "1,000+",
+        modules: "15",
+        performance: "A+ GTmetrix"
+      },
+      link: "https://www.grupopetropolis.com.br/"
+    }
+  ];
+
+  return (
+    <section id="infrastructure" className="py-20 bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            <span className="text-yellow-400">PROJETOS DE</span>
+            <br />
+            INFRAESTRUTURA
+          </h2>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            Projetos onde participei ativamente da montagem, organização e estruturação 
+            completa da infraestrutura tecnológica, desde a concepção até a implementação.
+          </p>
+        </div>
+        
+        <div className="space-y-12">
+          {infrastructureProjects.map((project, index) => (
+            <div key={index} className="bg-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-yellow-400 transition-all duration-300">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Imagem do projeto */}
+                <div className="relative">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-64 lg:h-full object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <div className="bg-yellow-400 text-black px-3 py-1 rounded font-bold text-sm">
+                      INFRAESTRUTURA
+                    </div>
+                  </div>
+                  {project.link && (
+                    <div className="absolute top-4 right-4">
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Conteúdo do projeto */}
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+                  <p className="text-blue-400 font-semibold mb-4">{project.role}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+                  
+                  {/* Responsabilidades */}
+                  <div className="mb-6">
+                    <h4 className="text-yellow-400 font-bold mb-3">RESPONSABILIDADES:</h4>
+                    <ul className="space-y-2">
+                      {project.responsibilities.map((resp, respIndex) => (
+                        <li key={respIndex} className="text-gray-300 text-sm flex items-start">
+                          <span className="text-yellow-400 mr-2">•</span>
+                          {resp}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  {/* Tecnologias */}
+                  <div className="mb-6">
+                    <h4 className="text-yellow-400 font-bold mb-3">TECNOLOGIAS:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span 
+                          key={techIndex}
+                          className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-xs border border-gray-600"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Métricas */}
+                  <div>
+                    <h4 className="text-yellow-400 font-bold mb-3">RESULTADOS:</h4>
+                    <div className="grid grid-cols-3 gap-4">
+                      {Object.entries(project.metrics).map(([key, value], metricIndex) => (
+                        <div key={metricIndex} className="text-center">
+                          <div className="text-white font-bold text-lg">{value}</div>
+                          <div className="text-gray-400 text-xs capitalize">{key.replace('_', ' ')}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Componente Gallery - Momentos da Carreira
+const GallerySection = () => {
+  const careerMoments = [
+    {
+      image: careerPhoto1,
+      title: "AWS Initiate",
+      description: "Participação em evento AWS para iniciativas educacionais",
+      year: "2022"
+    },
+    {
+      image: careerPhoto2,
+      title: "Laboratório de Programação",
+      description: "Aula prática com alunos no laboratório de informática",
+      year: "2024"
+    },
+    {
+      image: careerPhoto3,
+      title: "Equipe de Desenvolvimento",
+      description: "Trabalho em equipe com desenvolvedores e alunos",
+      year: "2024"
+    },
+    {
+      image: careerPhoto4,
+      title: "Conferência de Tecnologia",
+      description: "Participação em evento de tecnologia e inovação",
+      year: "2022"
+    },
+    {
+      image: careerPhoto5,
+      title: "Momento Educacional",
+      description: "Atividade de ensino e orientação acadêmica",
+      year: "2023"
+    },
+    {
+      image: careerPhoto6,
+      title: "Apresentação Técnica",
+      description: "Palestra sobre tecnologias emergentes",
+      year: "2023"
+    }
+  ];
+
+  return (
+    <section id="gallery" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            <span className="text-yellow-400">MOMENTOS DA</span>
+            <br />
+            CARREIRA
+          </h2>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            Uma jornada através dos momentos mais marcantes da minha trajetória profissional, 
+            desde eventos de tecnologia até momentos de ensino e desenvolvimento em equipe.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {careerMoments.map((moment, index) => (
+            <div key={index} className="group relative overflow-hidden rounded-lg bg-gray-800 border border-gray-700 hover:border-yellow-400 transition-all duration-300">
+              <div className="aspect-w-16 aspect-h-12 overflow-hidden">
+                <img 
+                  src={moment.image} 
+                  alt={moment.title}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="bg-yellow-400 text-black px-3 py-1 rounded text-sm font-bold inline-block mb-2">
+                  {moment.year}
+                </div>
+                <h3 className="text-xl font-bold mb-2">{moment.title}</h3>
+                <p className="text-gray-300 text-sm">{moment.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // Componente Contact estilo infográfico
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -778,7 +1042,9 @@ function App() {
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
+      <InfrastructureSection />
       <SkillsSection />
+      <GallerySection />
       <ContactSection />
       <Footer />
     </div>
