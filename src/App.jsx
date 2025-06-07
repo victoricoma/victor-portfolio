@@ -221,7 +221,7 @@ const HeroSection = () => {
               </div>
               
               {/* Quote */}
-              <div className="absolute -right-20 top-1/2 transform -translate-y-1/2 bg-gray-800 p-4 rounded-lg border border-gray-700 max-w-xs hidden xl:block">
+              <div className="absolute -right-78 top-1/2 transform -translate-y-1/2 bg-gray-800 p-4 rounded-lg border border-gray-700 max-w-xs hidden xl:block">
                 <div className="text-yellow-400 text-lg font-bold mb-2">"</div>
                 <div className="text-gray-300 text-sm italic">
                   Engenheiro de Dados especializado em IA, focando em criar soluções inovadoras e escaláveis.
