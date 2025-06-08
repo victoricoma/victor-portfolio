@@ -9,6 +9,7 @@ import profilePhoto2 from './assets/profile-about.png';
 import teamPhoto from './assets/profile-networking.png';
 import logoLight from './assets/logo-light.png';
 import logoDark from './assets/logo-dark.png';
+import heroLogo from './assets/ICOMA.png'
 
 // Importar fotos de momentos da carreira
 import careerPhoto1 from './assets/20220921_081119.jpg'; // AWS Initiate
@@ -67,9 +68,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-            <img src={logoDark} alt="Icoma Education" className="w-10 h-10" />
             <div className="text-2xl font-bold text-white">
-             <strong>ICOMA</strong>.com.br
+             www.<strong>icoma</strong>.com.br
             </div>
           </div>
           
@@ -136,11 +136,7 @@ const HeroSection = () => {
           {/* Lado esquerdo - Informações */}
           <div className="text-center lg:text-left">
             <div className="mb-8">
-              <h1 className="text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-                VICTOR
-                <br />
-                <span className="text-blue-400">ICOMA</span>
-              </h1>
+              <img src={heroLogo} alt="Logo do Hero" />
               <div className="text-xl text-gray-300 mb-2">18+ anos de experiência em tecnologia</div>
               <div className="text-lg text-gray-400 mb-6">02-11-1999 | Matão - SP | Brasil</div>
             </div>
@@ -221,10 +217,11 @@ const HeroSection = () => {
               </div>
               
               {/* Quote */}
-              <div className="absolute -right-78 top-1/2 transform -translate-y-1/2 bg-gray-800 p-4 rounded-lg border border-gray-700 max-w-xs hidden xl:block">
+              <div className="absolute -right-45 top-1/2 transform -translate-y-1/2 bg-gray-800 p-4 rounded-lg border border-gray-700 max-w-xs hidden xl:block">
                 <div className="text-yellow-400 text-lg font-bold mb-2">"</div>
                 <div className="text-gray-300 text-sm italic">
-                  Engenheiro de Dados especializado em IA, focando em criar soluções inovadoras e escaláveis.
+                  Paixonado por tecnologia<br />
+                  e Inteligência Artificial.
                 </div>
                 <div className="text-yellow-400 text-lg font-bold text-right">"</div>
               </div>
