@@ -474,6 +474,8 @@ const SkillsSection = () => {
         { name: "React", level: 95, icon: "⚛️" },
         { name: "Angular", level: 95, icon: "🅰️" },
         { name: "Node.js", level: 95, icon: "🟢" },
+        { name: ".Net", level: 80, icon: "💻" },
+        { name: "Java", level: 80, icon: "☕" },
         { name: "Python", level: 85, icon: "🐍" }
       ]
     },
@@ -481,17 +483,18 @@ const SkillsSection = () => {
       title: "CLOUD & DEVOPS",
       skills: [
         { name: "Google Cloud", level: 95, icon: "☁️" },
+        { name: "AWS Amazon", level: 95, icon: "🏗️" },
         { name: "Azure", level: 85, icon: "🔷" },
-        { name: "Docker", level: 90, icon: "🐳" },
-        { name: "Kubernetes", level: 85, icon: "⚙️" }
+        { name: "Docker", level: 60, icon: "🐳" },
+        { name: "Kubernetes", level: 60, icon: "⚙️" }
       ]
     }
   ];
 
   const languages = [
     { name: "Português", level: 100, flag: "🇧🇷" },
-    { name: "Inglês", level: 60, flag: "🇺🇸" },
-    { name: "Japonês", level: 30, flag: "🇯🇵" }
+    { name: "Inglês", level: 40, flag: "🇺🇸" },
+    { name: "Japonês", level: 50, flag: "🇯🇵" }
   ];
 
   const education = [
