@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Phone, MapPin, Code, Database, Cloud, Brain, Users, GraduationCap, Award, Calendar, ExternalLink } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Phone, MapPin, Code, Database, Cloud, Brain, Users, GraduationCap, Award, Calendar, ExternalLink, BookOpen, Video } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import './App.css';
 
@@ -24,6 +24,29 @@ import projetoTikTok from './assets/projeto-tiktok.png';
 import projetoMynd8 from './assets/projeto-mynd8.png';
 import projetoPetropolis from './assets/projeto-petropolis.png';
 
+// Importar imagens de artigos DevOps
+import devops1 from './assets/devops(1).png';
+import devops2 from './assets/devops(2).png';
+import devops3 from './assets/devops(3).png';
+import devops4 from './assets/devops(4).png';
+import devops5 from './assets/devops(5).png';
+import devops6 from './assets/devops(6).png';
+import devops7 from './assets/devops(7).png';
+import devops8 from './assets/devops(8).png';
+import devops9 from './assets/devops(9).png';
+import devops10 from './assets/devops(10).png';
+import devops11 from './assets/devops(11).png';
+import devops12 from './assets/devops(12).png';
+import devops13 from './assets/devops(13).png';
+import devops14 from './assets/devops(14).png';
+
+// Importar imagens de artigos Ativas
+import ativas1 from './assets/ativas(1).png';
+import ativas2 from './assets/ativas(2).png';
+import ativas3 from './assets/ativas(3).png';
+import ativas4 from './assets/ativas(4).png';
+import ativas5 from './assets/ativas(5).png';
+
 // Componente Header moderno
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +59,7 @@ const Header = () => {
     { href: '#projects', label: 'Projects' },
     { href: '#infrastructure', label: 'Infrastructure' },
     { href: '#skills', label: 'Skills' },
+    { href: '#articles', label: 'Articles' },
     { href: '#gallery', label: 'Gallery' },
     { href: '#contact', label: 'Contact' }
   ];
@@ -64,7 +88,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 w-full bg-black/95 backdrop-blur-sm border-b border-gray-800 z-50">
+    <header className="fixed top-0 w-full bg-gradient-to-r from-black/90 via-black/70 to-transparent backdrop-blur-sm border-b border-gray-800/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
@@ -130,8 +154,23 @@ const Header = () => {
 // Componente Hero Section estilo infográfico
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="min-h-screen relative flex items-center overflow-hidden">
+      {/* Vídeo de fundo */}
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/fundohero.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Overlay escuro para melhor legibilidade */}
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      
+      {/* Conteúdo */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Lado esquerdo - Informações */}
           <div className="text-center lg:text-left">
@@ -141,7 +180,7 @@ const HeroSection = () => {
               <div className="text-lg text-gray-400 mb-6">02-11-1999 | Matão - SP | Brasil</div>
             </div>
 
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 mb-8">
+            <div className="bg-gray-800/70 backdrop-blur-sm p-6 rounded-lg border border-gray-700 mb-8">
               <div className="text-yellow-400 text-2xl font-bold mb-4">ESPECIALIDADES</div>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center text-gray-300">
@@ -1018,6 +1057,194 @@ const ContactSection = () => {
   );
 };
 
+// Componente Articles - Seção de Artigos DevOps e Ativas
+const ArticlesSection = () => {
+  const devopsArticles = [
+    { image: devops1, title: "DevOps Fundamentals", category: "DevOps" },
+    { image: devops2, title: "CI/CD Pipeline Implementation", category: "DevOps" },
+    { image: devops3, title: "Container Orchestration", category: "DevOps" },
+    { image: devops4, title: "Infrastructure as Code", category: "DevOps" },
+    { image: devops5, title: "Monitoring and Observability", category: "DevOps" },
+    { image: devops6, title: "Security in DevOps", category: "DevOps" },
+    { image: devops7, title: "Cloud Native Applications", category: "DevOps" },
+    { image: devops8, title: "Automated Testing Strategies", category: "DevOps" },
+    { image: devops9, title: "Deployment Strategies", category: "DevOps" },
+    { image: devops10, title: "Performance Optimization", category: "DevOps" },
+    { image: devops11, title: "Disaster Recovery", category: "DevOps" },
+    { image: devops12, title: "Configuration Management", category: "DevOps" },
+    { image: devops13, title: "Service Mesh Architecture", category: "DevOps" },
+    { image: devops14, title: "GitOps Workflows", category: "DevOps" }
+  ];
+
+  const ativasArticles = [
+    { image: ativas1, title: "Metodologias Ativas na Educação", category: "Educação" },
+    { image: ativas2, title: "Aprendizagem Baseada em Projetos", category: "Educação" },
+    { image: ativas3, title: "Gamificação no Ensino", category: "Educação" },
+    { image: ativas4, title: "Tecnologia Educacional", category: "Educação" },
+    { image: ativas5, title: "Avaliação Formativa", category: "Educação" }
+  ];
+
+  const [activeTab, setActiveTab] = useState('devops');
+
+  return (
+    <section id="articles" className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            <span className="text-yellow-400">ARTIGOS E</span>
+            <br />
+            CONTEÚDOS
+          </h2>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+            Artigos técnicos, tutoriais e conteúdos educacionais sobre DevOps, 
+            tecnologia e metodologias ativas de ensino.
+          </p>
+        </div>
+
+        {/* Tabs */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-800 p-1 rounded-lg border border-gray-700">
+            <button
+              onClick={() => setActiveTab('devops')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                activeTab === 'devops'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              <Code className="w-5 h-5 inline mr-2" />
+              DevOps & Tecnologia
+            </button>
+            <button
+              onClick={() => setActiveTab('educacao')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                activeTab === 'educacao'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              <BookOpen className="w-5 h-5 inline mr-2" />
+              Educação & Metodologias
+            </button>
+            <button
+              onClick={() => setActiveTab('video')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                activeTab === 'video'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              <Video className="w-5 h-5 inline mr-2" />
+              Projeto de Software
+            </button>
+          </div>
+        </div>
+
+        {/* Content */}
+        {activeTab === 'devops' && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {devopsArticles.map((article, index) => (
+              <div key={index} className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-blue-400 transition-all duration-300 group">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                      {article.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-white font-bold text-sm mb-2 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">Artigo Técnico</span>
+                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-400 transition-colors" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {activeTab === 'educacao' && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ativasArticles.map((article, index) => (
+              <div key={index} className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-yellow-400 transition-all duration-300 group">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold">
+                      {article.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-white font-bold text-sm mb-2 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">Metodologia Ativa</span>
+                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-yellow-400 transition-colors" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {activeTab === 'video' && (
+          <div className="flex justify-center">
+            <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 max-w-4xl">
+              <div className="relative">
+                <video 
+                  controls 
+                  className="w-full h-auto"
+                  poster="/projeto-software-thumb.jpg"
+                >
+                  <source src="https://example.com/video-placeholder.mp4" type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    VÍDEO
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-white font-bold text-xl mb-2">
+                  Projeto de Software com Esteiras em DevOps Azure
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  Demonstração completa de um projeto de software implementando 
+                  esteiras de CI/CD utilizando Azure DevOps, desde o desenvolvimento 
+                  até o deploy em produção.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-400 text-sm">Duração: ~15 minutos</span>
+                  <div className="flex space-x-2">
+                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs">Azure</span>
+                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs">DevOps</span>
+                    <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs">CI/CD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
 // Componente Footer
 const Footer = () => {
   return (
@@ -1044,6 +1271,7 @@ function App() {
       <ProjectsSection />
       <InfrastructureSection />
       <SkillsSection />
+      <ArticlesSection />
       <GallerySection />
       <ContactSection />
       <Footer />
