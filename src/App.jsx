@@ -69,7 +69,7 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <img src={logoDark} alt="Icoma Education" className="w-10 h-10" />
             <div className="text-2xl font-bold text-white">
-              Victor Icoma
+             <strong>ICOMA</strong>.com.br
             </div>
           </div>
           
@@ -141,8 +141,8 @@ const HeroSection = () => {
                 <br />
                 <span className="text-blue-400">ICOMA</span>
               </h1>
-              <div className="text-xl text-gray-300 mb-2">8+ anos de experiência</div>
-              <div className="text-lg text-gray-400 mb-6">01-11-1990 | São Paulo | Brasil</div>
+              <div className="text-xl text-gray-300 mb-2">18+ anos de experiência em tecnologia</div>
+              <div className="text-lg text-gray-400 mb-6">02-11-1999 | Matão - SP | Brasil</div>
             </div>
 
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 mb-8">
@@ -293,7 +293,7 @@ const AboutSection = () => {
 const ExperienceSection = () => {
   const experiences = [
     {
-      year: "2021-2023",
+      year: "2021-2025",
       company: "SOULCODE.COM",
       position: "Head de Arquitetura de Software e Tecnologia",
       description: "Liderança técnica no desenvolvimento de plataformas LMS e sistemas de vendas. Gestão de equipes e implementação de soluções escaláveis.",
@@ -307,7 +307,7 @@ const ExperienceSection = () => {
       technologies: ["Angular", "C#", ".NET Core", "SQL Server", "Azure DevOps"]
     },
     {
-      year: "2015-2023",
+      year: "2015-2025",
       company: "CENTRO PAULA SOUZA",
       position: "Professor e Pesquisador",
       description: "Docente em cursos técnicos e superiores, orientação de TCCs e pesquisa em tecnologias emergentes.",

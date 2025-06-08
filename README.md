@@ -28,7 +28,7 @@ Site portfólio profissional desenvolvido em React para Victor Icoma, Engenheiro
    - Lista de especialidades
 
 4. **Experiência Profissional**
-   - SOULCODE.COM (2021-2023) - Head de Arquitetura
+   - SOULCODE.COM (2021-2025) - Head de Arquitetura
    - EVO | W12 (2020-2021) - Desenvolvedor Web
    - CENTRO PAULA SOUZA (2015-2023) - Professor e Pesquisador
 
