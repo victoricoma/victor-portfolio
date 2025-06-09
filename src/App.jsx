@@ -222,10 +222,10 @@ const HeroSection = () => {
 
             {/* Social Icons */}
             <div className="flex justify-center lg:justify-start space-x-4 mt-8">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/victoricoma" className="text-gray-400 hover:text-white transition-colors">
                 <Github size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/victor-icoma-27190b109/" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={24} />
               </a>
               <a href="mailto:victorsena3010@gmail.com" className="text-gray-400 hover:text-white transition-colors">
@@ -311,11 +311,11 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                 <div className="text-yellow-400 font-bold mb-2">LOCALIZAÇÃO</div>
-                <div className="text-gray-300">São Paulo, Brasil</div>
+                <div className="text-gray-300">Matão-SP, Brasil</div>
               </div>
               <div className="bg-gray-800 p-4 rounded-lg border border-gray-700">
                 <div className="text-yellow-400 font-bold mb-2">EXPERIÊNCIA</div>
-                <div className="text-gray-300">8+ Anos</div>
+                <div className="text-gray-300">18+ Anos de Educação e Tecnologia</div>
               </div>
             </div>
           </div>
@@ -669,7 +669,7 @@ const InfrastructureSection = () => {
       ],
       technologies: ["Google Cloud Platform", "Moodle", "Kubernetes", "Firebase", "Vertex AI"],
       metrics: {
-        users: "10,000+",
+        users: "30,000+",
         uptime: "99.9%",
         performance: "< 2s load time"
       }
@@ -943,7 +943,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-white font-bold">Localização</p>
-                  <p className="text-gray-300">São Paulo, Brasil</p>
+                  <p className="text-gray-300">Matão - SP, Brasil</p>
                 </div>
               </div>
               
@@ -974,10 +974,10 @@ const ContactSection = () => {
             
             <div className="mt-8">
               <div className="flex space-x-4">
-                <a href="#" className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <a href="https://www.linkedin.com/in/victor-icoma-27190b109/" className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                   <Linkedin className="w-6 h-6 text-white" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <a href="https://github.com/victoricoma" className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                   <Github className="w-6 h-6 text-white" />
                 </a>
               </div>
