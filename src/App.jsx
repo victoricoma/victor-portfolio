@@ -1210,7 +1210,7 @@ const ArticlesSection = () => {
                   className="w-full h-auto"
                   poster="/projeto-software-thumb.jpg"
                 >
-                  <source src="https://example.com/video-placeholder.mp4" type="video/mp4" />
+                  <source src="artigo-esteira.mp4" type="video/mp4" />
                   Seu navegador não suporta o elemento de vídeo.
                 </video>
                 <div className="absolute top-4 left-4">
