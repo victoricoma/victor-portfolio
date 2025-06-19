@@ -256,7 +256,7 @@ const HeroSection = () => {
               </div>
               
               {/* Quote */}
-              <div className="absolute -right-45 top-1/2 transform -translate-y-1/2 bg-gray-800 p-4 rounded-lg border border-gray-700 max-w-xs hidden xl:block">
+              <div className="absolute -right-50 top-1/2 transform -translate-y-1/2 bg-gray-800 p-4 rounded-lg border border-gray-700 max-w-xs hidden xl:block">
                 <div className="text-yellow-400 text-lg font-bold mb-2">"</div>
                 <div className="text-gray-300 text-sm italic">
                   Apaixonado por Tecnologia<br />
